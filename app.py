@@ -54,7 +54,7 @@ def clima_por_cep():
         #print("retorno:", resultado)
         
         # Montando o endereço completo para geocodificação
-        endereco = f"{resultado.get('logradouro')}, {resultado.get('bairro')},{resultado.get('localidade')}, {resultado.get('uf')}"
+        endereco = f"{resultado['endereco'].get('logradouro')}, {resultado['endereco'].get('bairro')},{resultado['endereco'].get('localidade')}, {resultado['endereco'].get('uf')}"
         # Obter as coordenadas via geocodificação
         latlon = controller.geocodificar_endereco(endereco)
         
@@ -66,7 +66,7 @@ def clima_por_cep():
         #print("Coordenadas:", latlon)
 
         #print("Dados do endereço:", resultado)
-        '''
+        
         # Obtendo os dados do clima usando as coordenadas
         clima = controller.obter_clima(latlon['lat'], latlon['lon'])
         #print("Dados do clima:", clima)
@@ -80,7 +80,7 @@ def clima_por_cep():
             "weathercode": clima["current_weather"]["weathercode"],  # Código do clima
             "elevation": clima["elevation"],  # Altitude
             "timezone": clima["timezone"],  # Fuso horário
-        }'''
+        }
         # Retornando os dados combinados
         return jsonify(resultado)
 
