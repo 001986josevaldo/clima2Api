@@ -61,7 +61,7 @@ class ClimaController:
     def geocodificar_endereco(self, endereco):
 
         # Desestruturar o endereço em partes: rua, bairro, cidade, estado
-        #print("Endereço recebido para geocodificação:", endereco)
+        print("Endereço recebido para geocodificação:", endereco)
         rua, bairro, cidade, estado = endereco.split(',')
         api_key = os.getenv("LOCATIONIQ_KEY")
 
