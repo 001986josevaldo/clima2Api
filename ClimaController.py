@@ -95,7 +95,7 @@ class ClimaController:
         # Se não encontrar, retorna o primeiro resultado como fallback
         if not endereco_correspondente:
             endereco_correspondente = dados[0]
-        #print("Endereço correspondente:", endereco_correspondente)
+        print("Endereço correspondente:", endereco_correspondente)
         return {
         'lat': endereco_correspondente['lat'],
         'lon': endereco_correspondente['lon']
