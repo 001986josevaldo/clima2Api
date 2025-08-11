@@ -52,7 +52,7 @@ def clima_por_cep():
             "ibge": endereco.get("ibge")}
         }
         #print("retorno:", resultado)
-        '''
+        
         # Montando o endereço completo para geocodificação
         endereco = f"{resultado.get('logradouro')}, {resultado.get('bairro')},{resultado.get('localidade')}, {resultado.get('uf')}"
         # Obter as coordenadas via geocodificação
@@ -66,7 +66,7 @@ def clima_por_cep():
         #print("Coordenadas:", latlon)
 
         #print("Dados do endereço:", resultado)
-        
+        '''
         # Obtendo os dados do clima usando as coordenadas
         clima = controller.obter_clima(latlon['lat'], latlon['lon'])
         #print("Dados do clima:", clima)
