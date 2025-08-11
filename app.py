@@ -52,7 +52,7 @@ def clima_por_cep():
             "ibge": endereco.get("ibge")}
         }
         #print("retorno:", resultado)
-
+        '''
         # Montando o endereço completo para geocodificação
         endereco = f"{resultado.get('logradouro')}, {resultado.get('bairro')},{resultado.get('localidade')}, {resultado.get('uf')}"
         # Obter as coordenadas via geocodificação
@@ -80,7 +80,7 @@ def clima_por_cep():
             "weathercode": clima["current_weather"]["weathercode"],  # Código do clima
             "elevation": clima["elevation"],  # Altitude
             "timezone": clima["timezone"],  # Fuso horário
-        }
+        }'''
         # Retornando os dados combinados
         return jsonify(resultado)
 
