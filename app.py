@@ -15,6 +15,9 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # <-- habilita CORS para todos os domínios
 
+@app.route('/api/v1/health')
+def route_health():
+    return jsonify({"response": "Up-server"}), 200
 
 @app.route('/clima')
 def clima_por_cep():
